@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChicadressModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ChicadressEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="ChicadressModel.User" />
+    <EntitySet Name="User_Role" EntityType="ChicadressModel.User_Role" />
+    <AssociationSet Name="FK_User_Role" Association="ChicadressModel.FK_User_Role">
+      <End Role="User_Role" EntitySet="User_Role" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="Registers" EntityType="ChicadressModel.Register" />
+    <EntitySet Name="UserActivations" EntityType="ChicadressModel.UserActivation" />
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StateCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MarriageDate" Type="DateTime" Precision="3" />
+    <Property Name="User_Id" Type="Int32" />
+    <NavigationProperty Name="User_Role" Relationship="ChicadressModel.FK_User_Role" FromRole="User" ToRole="User_Role" />
+  </EntityType>
+  <EntityType Name="User_Role">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="ChicadressModel.FK_User_Role" FromRole="User_Role" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_User_Role">
+    <End Type="ChicadressModel.User_Role" Role="User_Role" Multiplicity="0..1" />
+    <End Type="ChicadressModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_Role">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Register">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StateCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MarriageDate" Type="DateTime" Precision="3" />
+    <Property Name="Bride" Type="Boolean" />
+    <Property Name="Groom" Type="Boolean" />
+    <Property Name="PartnerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PartnerIs" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Budget" Type="Int32" />
+    <Property Name="NoOfGuest" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserActivation">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="AcitivationCode" Type="Guid" Nullable="false" />
+  </EntityType>
+</Schema>

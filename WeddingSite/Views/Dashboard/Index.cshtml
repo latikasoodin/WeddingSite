@@ -1,0 +1,515 @@
+﻿@model WeddingSite.Models.Register
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="wrapper desbrd">
+    <section class="web_banner" style="background-image:url(../../images/banner_2.jpg);background-repeat:no-repeat;background-size:cover;">
+        <div class="container">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+                <span class="calendr"></span>
+                <h6>Vendredi 12 juillet 2017</h6>
+                <div class="profile_box">
+                    <div class="boy_box">
+                        <span class="man_bg"></span>
+                        <small>@Model.Name</small>
+                    </div>
+                    <span class="and_text">& </span>
+                    <div class="gl_box">
+                        <span class="woman_bg"></span>
+                        <small>@Model.Name</small>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <span class="il">Il reste ...</span>
+                <div class="col-sm-4 col-sm-offset-4 clck">                   
+                    <div id="clockdiv">
+                        <div class="clck">
+                            <span class="days"></span>
+                            <p>Jours</p>
+                        </div>
+                        <div class="clck">
+                            <span class="hours"></span>
+                            <p>Heures</p>
+                        </div>
+                        <div class="clck">
+                            <span class="minutes"></span>
+                            <p>Minutes</p>
+                        </div>
+                        <div class="clck">
+                            <span class="seconds"></span>
+                            <p>Secondes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sub_menufullwidth">
+        <div class="container">
+            <div class="row">
+                <div class="sub_menu">
+                    <ul class="list_sub_menu">
+                        <li class="active">
+                            <a href="">
+                                <span class="wed i_rings"></span> mon Mariage
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="task i_write_feedback"></span> Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="vndr i_hotel_restaurant_16"></span> Taches
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="gst i_live_contest"></span> Prestataires
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="tble i_dinner_table"></span> Budget
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="bdg i_official_document"></span> Invites
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="drss i_wedding_dress"></span> Tables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="web i_tv_television"></span>  <i class="badge">10</i>Messages
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="ttl_box">
+                    <h3><i class="gst i_live_contestt"></i> Trouvez le prestataire de votre choix pres de chez vous</h3>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="serch_box">
+                    <form>
+                        <div class="form-group col-sm-5">
+                            <input type="text" class="form-control" id="teett" placeholder="Que cherchez-vous?" />
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <input type="text" class="form-control" placeholder="Sélcetionnez votre ville" id="teet" />
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="submit" class="btn btn-default btnsbmit">Chercher</button>
+                        </div>
+                    </form>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <section class="left_right_dash">
+                <div class="col-sm-9 no_left_pdg">
+
+                    <div class="row_">
+                        <div class="ttl_box new_ttl">
+                            <h3><i class="vndr i_hotel_restaurant_166"></i> Vos prochaine teche a effectuer</h3>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="list_dashbord">
+                            <div class="panel panel-default">
+                                <!-- Default panel contents -->
+                                <!-- List group -->
+                                <ul class="list-group">
+                                    <li class="list-group-item clearfix">
+                                        <a href="">
+                                            <h3><i class="rclock_icon"></i> Trouver le groupe de musique ou le dj pour la reception</h3>
+                                            <span>15 juin 2017</span>
+                                            <i class="fa fa-chevron-right pull-right"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item clearfix">
+                                        <a href="">
+                                            <h3 class="lline"><i class="right_icon"></i> Trouver le groupe de musique ou le dj pour la reception</h3>
+                                            <span>15 juin 2017</span>
+                                            <i class="fa fa-chevron-right pull-right"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item clearfix">
+                                        <a href="">
+                                            <h3><i class="rclock_icon"></i> Trouver le groupe de musique ou le dj pour la reception</h3>
+                                            <span>15 juin 2017</span>
+                                            <i class="fa fa-chevron-right pull-right"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="ad_box">
+                        <img src="~/Content/images/ad_full.jpg" class="img-responsive" alt="" usemap="#Mapp" />
+                        <map name="Mapp" id="Mapp">
+                            <area alt="" title="" href="#" shape="rect" coords="690,62,835,27" />
+                        </map>
+                    </div>
+                    <div class="ttl_box">
+                        <h3><i class="gst i_live_contestt"></i> Vos prestaires favoris</h3>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="dash_box_main">
+                                <div class="header">
+                                    <figure class="border-bottom">
+                                        <a href="">
+                                            <img class="gen-tool-icon img-responsive" src="~/Content/images/coup_1.jpg" />
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="p10">
+                                    <p class="">
+                                        Florista
+                                    </p>
+                                    <small>Marrakech, Maroc</small>
+                                    <span class="providers-name pure-u-1">
+                                        <ul class="star_rating">
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="active">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                        <a href="">DEMANDER UN DEVIS</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="dash_box_main">
+                                <div class="header">
+                                    <figure class="border-bottom">
+                                        <a href="">
+                                            <img class="gen-tool-icon img-responsive" src="~/Content/images/coup_2.jpg" />
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="p10">
+                                    <p class="">
+                                        Florista
+                                    </p>
+                                    <small>Marrakech, Maroc</small>
+                                    <span class="providers-name pure-u-1">
+                                        <ul class="star_rating">
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="active">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                        <a href="">DEMANDER UN DEVIS</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="dash_box_main">
+                                <div class="header">
+                                    <figure class="border-bottom">
+                                        <a href="">
+                                            <img class="gen-tool-icon img-responsive" src="~/Content/images/coup_3.jpg" />
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="p10">
+                                    <p class="">
+                                        Florista
+                                    </p>
+                                    <small>Marrakech, Maroc</small>
+                                    <span class="providers-name pure-u-1">
+                                        <ul class="star_rating">
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="active">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                        <a href="">DEMANDER UN DEVIS</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="dash_box_main">
+                                <div class="header">
+                                    <figure class="border-bottom">
+                                        <a href="">
+                                            <img class="gen-tool-icon img-responsive" src="~/Content/images/coup_4.jpg" />
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="p10">
+                                    <p class="">
+                                        Florista
+                                    </p>
+                                    <small>Marrakech, Maroc</small>
+                                    <span class="providers-name pure-u-1">
+                                        <ul class="star_rating">
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="active">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                        <a href="">DEMANDER UN DEVIS</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="dash_box_main">
+                                <div class="header">
+                                    <figure class="border-bottom">
+                                        <a href="">
+                                            <img class="gen-tool-icon img-responsive" src="~/Content/images/coup_1.jpg" />
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="p10">
+                                    <p class="">
+                                        Florista
+                                    </p>
+                                    <small>Marrakech, Maroc</small>
+                                    <span class="providers-name pure-u-1">
+                                        <ul class="star_rating">
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="active">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                        <a href="">DEMANDER UN DEVIS</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="dash_box_main">
+                                <div class="header">
+                                    <figure class="border-bottom">
+                                        <a href="">
+                                            <img class="gen-tool-icon img-responsive" src="~/Content/images/coup_2.jpg" />
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="p10">
+                                    <p class="">
+                                        Florista
+                                    </p>
+                                    <small>Marrakech, Maroc</small>
+                                    <span class="providers-name pure-u-1">
+                                        <ul class="star_rating">
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="active">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                        <a href="">DEMANDER UN DEVIS</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="dash_box_main">
+                                <div class="header">
+                                    <figure class="border-bottom">
+                                        <a href="">
+                                            <img class="gen-tool-icon img-responsive" src="~/Content/images/coup_3.jpg" />
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="p10">
+                                    <p class="">
+                                        Florista
+                                    </p>
+                                    <small>Marrakech, Maroc</small>
+                                    <span class="providers-name pure-u-1">
+                                        <ul class="star_rating">
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="active">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                        <a href="">DEMANDER UN DEVIS</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="dash_box_main">
+                                <div class="header">
+                                    <figure class="border-bottom">
+                                        <a href="">
+                                            <img class="gen-tool-icon img-responsive" src="~/Content/images/coup_4.jpg" />
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="p10">
+                                    <p class="">
+                                        Florista
+                                    </p>
+                                    <small>Marrakech, Maroc</small>
+                                    <span class="providers-name pure-u-1">
+                                        <ul class="star_rating">
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="active">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                        <a href="">DEMANDER UN DEVIS</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 padding-right">
+                    <section class="box_detail" style="background-image:url(../../images/ad3.jpg);background-repeat:no-repeat;background-size:cover;padding:15px;margin:0 0 20px;">
+                        <ul>
+                            <li>
+                                <div class="icon">
+                                    <span class="tble i_dinner_table"></span>
+                                </div>
+                                <div class="txt_sed">
+                                    <p>200 000,00 MAD</p>
+                                    <span>Modifie mon budget</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <div class="txt_sedd">
+                                    <span>Montant Paye</span>
+                                    <p>30 000,00 MAD</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <div class="txt_sedd">
+                                    <span>Montant restant</span>
+                                    <p>30 000,00 MAD</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                        </ul>
+                        <button class="btn btn_bdgt pull-right">Mon budget</button>
+                        <div class="clearfix"></div>
+                    </section>
+                    <section class="choos_color">
+                        <img src="~/Content/images/ad4.jpg" class="img-responsive" usemap="#Map" />
+                        <map name="Map" id="Map">
+                            <area href="javascript:void(0);" shape="rect" coords="61,639,220,598" />
+                        </map>
+                    </section>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </section>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,224 @@
+@charset "utf-8";
+/*
+      www.OnlineWebFonts.Com 
+      You must credit the author Copy this link on your web 
+      <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+*/
+@font-face {
+	font-family: "onlinewebfonts";
+	src:url("../fonts/onlinewebfonts.eot");
+	src:url("../fonts/onlinewebfonts.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/onlinewebfonts.woff2") format("woff2"),
+		url("../fonts/onlinewebfonts.woff") format("woff"),
+		url("../fonts/onlinewebfonts.ttf") format("truetype"),
+		url("../fonts/onlinewebfonts.svg#onlinewebfonts") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "onlinewebfonts_camera";
+	src:url("../fonts/onlinewebfonts_camera.eot");
+	src:url("../fonts/onlinewebfonts_camera.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/onlinewebfonts_camera.woff2") format("woff2"),
+		url("../fonts/onlinewebfonts_camera.woff") format("woff"),
+		url("../fonts/onlinewebfonts_camera.svg#onlinewebfonts") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "onlinewebfonts_task";
+	src:url("../fonts/onlinewebfonts_task.eot");
+	src:url("../fonts/onlinewebfonts_task.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/onlinewebfonts_task.woff2") format("woff2"),
+		url("../fonts/onlinewebfonts_task.woff") format("woff"),
+		url("../fonts/onlinewebfonts_task.ttf") format("truetype"),
+		url("../fonts/onlinewebfonts_task.svg#onlinewebfonts") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "onlinewebfonts_mrg";
+	src:url("../fonts/onlinewebfonts_mrg.eot");
+	src:url("../fonts/onlinewebfonts_mrg.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/onlinewebfonts_mrg.woff2") format("woff2"),
+		url("../fonts/onlinewebfonts_mrg.woff") format("woff"),
+		url("../fonts/onlinewebfonts_mrg.ttf") format("truetype"),
+		url("../fonts/onlinewebfonts_mrg.svg#onlinewebfonts") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "onlinewebfonts_vndr";
+	src:url("../fonts/onlinewebfonts_vndr.eot");
+	src:url("../fonts/onlinewebfonts_vndr.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/onlinewebfonts_vndr.woff2") format("woff2"),
+		url("../fonts/onlinewebfonts_vndr.woff") format("woff"),
+		url("../fonts/onlinewebfonts_vndr.ttf") format("truetype"),
+		url("../fonts/onlinewebfonts_vndr.svg#onlinewebfonts") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "onlinewebfonts_cur";
+	src:url("../fonts/onlinewebfonts_cur.eot");
+	src:url("../fonts/onlinewebfonts_cur.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/onlinewebfonts_cur.woff2") format("woff2"),
+		url("../fonts/onlinewebfonts_cur.woff") format("woff"),
+		url("../fonts/onlinewebfonts_cur.ttf") format("truetype"),
+		url("../fonts/onlinewebfonts_cur.svg#onlinewebfonts") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="i_"]:before, [class*=" i_"]:before{
+	font-family: "onlinewebfonts";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.tble.i_dinner_table:before {
+	content: "";
+	background-image:url(../images/budget.png);background-repeat:no-repeat;width:41px;height:36px;display:block;margin: 0 auto;
+}
+
+.tble.i_dinner_table_one:before {
+	content: "";
+	background-image:url(../images/invite.png);background-repeat:no-repeat;width:27px;height:39px;display:block;margin: 0 auto;
+}
+
+.came.i_camera_photo:before {
+	content: "\e012";
+	font-family: "onlinewebfonts_camera";
+}
+.task.i_write_feedback:before {
+	content: "";
+	background-image:url(../images/bird.png);background-repeat:no-repeat;width:44px;height:38px;display:block;margin: 0 auto;
+}
+.drss.i_wedding_dress:before
+{
+	content: "";
+	background-image:url(../images/chair.png);background-repeat:no-repeat;width:49px;height:42px;display:block;margin: 0 auto;
+}
+.wed.i_rings:before {
+	content: "";
+	background-image:url(../images/ring_2.png);background-repeat:no-repeat;width:43px;height:34px;display:block;margin: 0 auto;
+	
+}
+.bdg.i_official_document:before {
+	content: "";
+	background-image:url(../images/invite.png);background-repeat:no-repeat;width:27px;height:39px;display:block;margin: 0 auto;
+}
+.vndr.i_hotel_restaurant_16:before {
+	content: "";
+	background-image:url(../images/book.png);background-repeat:no-repeat;width:34px;height:32px;display:block;margin: 0 auto;
+}
+.vndr.i_hotel_restaurant_166 {
+    content: "";
+    background-image: url(../images/book1.png);
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 32px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+	margin-left:15px;
+}
+.vndr.i_hotel_restaurant_1667 {
+    content: "";
+    background-image: url(../images/budget_blue.png);
+    background-repeat: no-repeat;
+    width: 37px;
+    height: 32px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+	margin-left:15px;
+}
+.vndr.i_mail {
+    content: "";
+    background-image: url(../images/message_blue.png);
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 29px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+	margin-left:-6px;
+}
+
+.web.i_world_map:before {
+	content: "\e03a";
+	font-family: "onlinewebfonts_vndr";
+}
+.web.i_tv_television:before {
+	content: "";
+	background-image:url(../images/mail.png);background-repeat:no-repeat;width:40px;height:31px;display:block;margin: 0 auto;
+}
+.gst.i_live_contest:before {
+	content: "";
+	background-image:url(../images/presti.png);background-repeat:no-repeat;width:37px;height:37px;display:block;margin: 0 auto;
+}
+.gst.i_live_contestt:before {
+	content: "";
+	background-image:url(../images/presti_blue.png);background-repeat:no-repeat;width:37px;height:37px;display:block;margin: 0 auto;
+}
+
+.gst.blubird:before {
+	content: "";
+	background-image:url(../images/blue_bird.png);background-repeat:no-repeat;width:44px;height:38px;display:block;margin: 0 auto;
+}
+.gst.dlt:before {
+	content: "";
+background-image: url(../images/delet.png);
+background-repeat: no-repeat;
+width: 20px;
+height: 21px;
+display: inline-block;
+margin: 0 auto;
+float: right;
+position: relative;
+top: 5px;
+cursor: pointer;
+}
+.gst.cat:before {
+	content: "";
+background-image: url(../images/category.png);
+background-repeat: no-repeat;
+width: 18px;
+height: 17px;
+display: inline-block;
+margin: 0 auto;
+position: relative;
+top: 8px;
+cursor: pointer;
+}
+.gst.pencil:before {
+	content: "";
+background-image: url(../images/pencil.png);
+background-repeat: no-repeat;
+width: 20px;
+height: 19px;
+display: inline-block;
+margin: 0 auto;
+position: relative;
+top: 5px;
+}
+
+.med.i_small_table:before {
+	content: "\e034";
+	font-family: "onlinewebfonts";
+}
+.cur.i_currency:before {
+	content: "\e02b";
+	font-family: "onlinewebfonts_cur";
+}
+.crg.i_carriage:before {
+	content: "\e01a";
+	font-family: "onlinewebfonts_mrg";
+}

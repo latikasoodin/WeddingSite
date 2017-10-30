@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{056DEAD5-7C53-4492-AF41-1B5794764A5F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeddingSite</RootNamespace>
+    <AssemblyName>WeddingSite</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.7.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.7.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.7.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=8.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.8.0.1\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid, Version=9.8.0.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sendgrid.9.9.0\lib\net452\SendGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Spatial, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.7.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Chicadress.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chicadress.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Chicadress.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chicadress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Chicadress.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chicadress.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Register.cs">
+      <DependentUpon>Chicadress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Chicadress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserActivation.cs">
+      <DependentUpon>Chicadress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_Role.cs">
+      <DependentUpon>Chicadress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\animate.min.css" />
+    <Content Include="Content\css\bootstrap-datepicker.min.css" />
+    <Content Include="Content\css\bootstrap-datepicker3.css" />
+    <Content Include="Content\css\bootstrap-select.min.css" />
+    <Content Include="Content\css\bootstrap-touch-slider.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\business\ff1.css" />
+    <Content Include="Content\css\business\ff2.css" />
+    <Content Include="Content\css\business\js-ssl-utf8-ssl20170905-03UK97-1-common.js" />
+    <Content Include="Content\css\demo.css" />
+    <Content Include="Content\css\effects.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\frm.css" />
+    <Content Include="Content\css\frm2.css" />
+    <Content Include="Content\css\hover-min.css" />
+    <Content Include="Content\css\icon.css" />
+    <Content Include="Content\css\menu.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\slick-theme.css" />
+    <Content Include="Content\css\slick.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\style_.css" />
+    <Content Include="Content\css\style__.css" />
+    <Content Include="Content\css\vendors.css" />
+    <Content Include="Content\fonts\BauerBodoniStd-Roman.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\gotham-medium-webfont.svg" />
+    <Content Include="Content\fonts\lora-bold-webfont.svg" />
+    <Content Include="Content\fonts\lora-italic-webfont.svg" />
+    <Content Include="Content\fonts\lora-regular-webfont.svg" />
+    <Content Include="Content\fonts\MonotypeCorsiva.svg" />
+    <Content Include="Content\fonts\onlinewebfonts.svg" />
+    <Content Include="Content\fonts\onlinewebfonts_.svg" />
+    <Content Include="Content\fonts\onlinewebfonts_camera.svg" />
+    <Content Include="Content\fonts\onlinewebfonts_cur.svg" />
+    <Content Include="Content\fonts\onlinewebfonts_mrg.svg" />
+    <Content Include="Content\fonts\onlinewebfonts_vndr.svg" />
+    <Content Include="Content\fonts\onlinewebfonts__task.svg" />
+    <Content Include="Content\fonts\pts75f-webfont.svg" />
+    <Content Include="Content\fonts\PTSans-Caption.svg" />
+    <Content Include="Content\fonts\slick.svg" />
+    <Content Include="Content\images\1side.gif" />
+    <Content Include="Content\images\69_bodareal-uk-d.jpg" />
+    <Content Include="Content\images\ad1..jpg" />
+    <Content Include="Content\images\ad2.jpg" />
+    <Content Include="Content\images\ad3.jpg" />
+    <Content Include="Content\images\ad4.jpg" />
+    <Content Include="Content\images\ad_full.jpg" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\apple.png" />
+    <Content Include="Content\images\banner.jpg" />
+    <Content Include="Content\images\banner_2.jpg" />
+    <Content Include="Content\images\beauty.png" />
+    <Content Include="Content\images\bg_header-general.jpg" />
+    <Content Include="Content\images\bg_hero-landing.jpg" />
+    <Content Include="Content\images\bg_landing-footer.jpg" />
+    <Content Include="Content\images\bg_pattern.svg" />
+    <Content Include="Content\images\bg_widget-winner.jpg" />
+    <Content Include="Content\images\big_conseils.jpg" />
+    <Content Include="Content\images\big_des.jpg" />
+    <Content Include="Content\images\bird.png" />
+    <Content Include="Content\images\bkmark.png" />
+    <Content Include="Content\images\blackpyalo.png" />
+    <Content Include="Content\images\blue_bird.png" />
+    <Content Include="Content\images\book.png" />
+    <Content Include="Content\images\book1.png" />
+    <Content Include="Content\images\booy.png" />
+    <Content Include="Content\images\boy.png" />
+    <Content Include="Content\images\bride.png" />
+    <Content Include="Content\images\bride1.png" />
+    <Content Include="Content\images\budget.png" />
+    <Content Include="Content\images\budget_blue.png" />
+    <Content Include="Content\images\cake.png" />
+    <Content Include="Content\images\cal.png" />
+    <Content Include="Content\images\camera.png" />
+    <Content Include="Content\images\car.png" />
+    <Content Include="Content\images\category.png" />
+    <Content Include="Content\images\catrin.png" />
+    <Content Include="Content\images\chair.png" />
+    <Content Include="Content\images\clck.png" />
+    <Content Include="Content\images\color.png" />
+    <Content Include="Content\images\comAlta.jpg" />
+    <Content Include="Content\images\couple.jpg" />
+    <Content Include="Content\images\coup_1.jpg" />
+    <Content Include="Content\images\coup_2.jpg" />
+    <Content Include="Content\images\coup_3.jpg" />
+    <Content Include="Content\images\coup_4.jpg" />
+    <Content Include="Content\images\cra.png" />
+    <Content Include="Content\images\delet.png" />
+    <Content Include="Content\images\des_2.jpg" />
+    <Content Include="Content\images\des_3.jpg" />
+    <Content Include="Content\images\des_4.jpg" />
+    <Content Include="Content\images\des_5.jpg" />
+    <Content Include="Content\images\drpdwn.png" />
+    <Content Include="Content\images\editor.png" />
+    <Content Include="Content\images\filter.png" />
+    <Content Include="Content\images\first_gallery.png" />
+    <Content Include="Content\images\fixed_banner.jpg" />
+    <Content Include="Content\images\flower.png" />
+    <Content Include="Content\images\forth_gallery.png" />
+    <Content Include="Content\images\gen_access-benefict_en-GB.png" />
+    <Content Include="Content\images\gen_access-menu_en-GB.png" />
+    <Content Include="Content\images\gift.png" />
+    <Content Include="Content\images\girl.png" />
+    <Content Include="Content\images\girll.png" />
+    <Content Include="Content\images\googleplay.png" />
+    <Content Include="Content\images\groom.png" />
+    <Content Include="Content\images\groom1.png" />
+    <Content Include="Content\images\header-signup-vendors.jpg" />
+    <Content Include="Content\images\hero.png" />
+    <Content Include="Content\images\honeymoon.png" />
+    <Content Include="Content\images\icon_facebook.png" />
+    <Content Include="Content\images\invite.png" />
+    <Content Include="Content\images\invition.png" />
+    <Content Include="Content\images\jeff.jpg" />
+    <Content Include="Content\images\jwel.png" />
+    <Content Include="Content\images\kabutar.png" />
+    <Content Include="Content\images\lady.png" />
+    <Content Include="Content\images\llg.png" />
+    <Content Include="Content\images\mail.png" />
+    <Content Include="Content\images\mail_big.png" />
+    <Content Include="Content\images\men.png" />
+    <Content Include="Content\images\mesa-01.png" />
+    <Content Include="Content\images\mesa-02.png" />
+    <Content Include="Content\images\mesa-04.png" />
+    <Content Include="Content\images\message_blue.png" />
+    <Content Include="Content\images\message_profile.png" />
+    <Content Include="Content\images\music.png" />
+    <Content Include="Content\images\newslatter.jpg" />
+    <Content Include="Content\images\other.png" />
+    <Content Include="Content\images\pencil.png" />
+    <Content Include="Content\images\placehd.png" />
+    <Content Include="Content\images\placeholder_img.png" />
+    <Content Include="Content\images\plus_1.jpg" />
+    <Content Include="Content\images\plus_2.jpg" />
+    <Content Include="Content\images\plus_3.jpg" />
+    <Content Include="Content\images\plus_4.jpg" />
+    <Content Include="Content\images\pour_1.jpg" />
+    <Content Include="Content\images\pour_2.jpg" />
+    <Content Include="Content\images\pour_3.jpg" />
+    <Content Include="Content\images\pour_4.jpg" />
+    <Content Include="Content\images\presti.png" />
+    <Content Include="Content\images\presti_blue.png" />
+    <Content Include="Content\images\pyala.png" />
+    <Content Include="Content\images\reception.png" />
+    <Content Include="Content\images\right.png" />
+    <Content Include="Content\images\ring.png" />
+    <Content Include="Content\images\ring_2.png" />
+    <Content Include="Content\images\second_gallery.png" />
+    <Content Include="Content\images\separadorInvitationMaker.png" />
+    <Content Include="Content\images\small_img.jpg" />
+    <Content Include="Content\images\smmen.png" />
+    <Content Include="Content\images\sprite-subnav-ideas.svg" />
+    <Content Include="Content\images\sprite-subnav.svg" />
+    <Content Include="Content\images\sprite.png" />
+    <Content Include="Content\images\sprite_access.svg" />
+    <Content Include="Content\images\sprite_access_bridge.svg" />
+    <Content Include="Content\images\sprite_flags.svg" />
+    <Content Include="Content\images\sprite_icon_login.svg" />
+    <Content Include="Content\images\sprite_landing.svg" />
+    <Content Include="Content\images\sprite_login.png" />
+    <Content Include="Content\images\sprite_menuEmp.svg" />
+    <Content Include="Content\images\sprite_nav.svg" />
+    <Content Include="Content\images\sprite_recien-casados.svg" />
+    <Content Include="Content\images\sprite_ribbon.svg" />
+    <Content Include="Content\images\sprite_search.png" />
+    <Content Include="Content\images\sprite_ui.svg" />
+    <Content Include="Content\images\ss.png" />
+    <Content Include="Content\images\tabl_seting.png" />
+    <Content Include="Content\images\thrd_gallery.png" />
+    <Content Include="Content\images\tpGrid.gif" />
+    <Content Include="Content\images\trans.png" />
+    <Content Include="Content\images\truck.png" />
+    <Content Include="Content\images\user.png" />
+    <Content Include="Content\images\wadding_i.png" />
+    <Content Include="Content\images\wedplner.png" />
+    <Content Include="Content\images\woman.png" />
+    <Content Include="Content\js\bootstrap-datepicker.min.js" />
+    <Content Include="Content\js\bootstrap-select.min.js" />
+    <Content Include="Content\js\bootstrap-touch-slider-min.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.matchHeight.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.touchSwipe.min.js" />
+    <Content Include="Content\js\jquery_1.js" />
+    <Content Include="Content\js\js-ssl-utf8-ssl20170821-02UK97-1-common1.js" />
+    <Content Include="Content\js\js-ssl-utf8-ssl20170829-01UK97-1-common.js" />
+    <Content Include="Content\js\menu.js" />
+    <Content Include="Content\js\slick.min.js" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap-datepicker.min.css" />
+    <Content Include="css\bootstrap-datepicker3.css" />
+    <Content Include="css\bootstrap-select.min.css" />
+    <Content Include="css\bootstrap-touch-slider.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\business\ff1.css" />
+    <Content Include="css\business\ff2.css" />
+    <Content Include="css\business\js-ssl-utf8-ssl20170905-03UK97-1-common.js" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\effects.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\frm.css" />
+    <Content Include="css\frm2.css" />
+    <Content Include="css\hover-min.css" />
+    <Content Include="css\icon.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\slick-theme.css" />
+    <Content Include="css\slick.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style_.css" />
+    <Content Include="css\style__.css" />
+    <Content Include="css\vendors.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\1side.gif" />
+    <Content Include="images\69_bodareal-uk-d.jpg" />
+    <Content Include="images\ad1..jpg" />
+    <Content Include="images\ad2.jpg" />
+    <Content Include="images\ad3.jpg" />
+    <Content Include="images\ad4.jpg" />
+    <Content Include="images\ad_full.jpg" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\apple.png" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\banner_2.jpg" />
+    <Content Include="images\beauty.png" />
+    <Content Include="images\bg_header-general.jpg" />
+    <Content Include="images\bg_hero-landing.jpg" />
+    <Content Include="images\bg_landing-footer.jpg" />
+    <Content Include="images\bg_pattern.svg" />
+    <Content Include="images\bg_widget-winner.jpg" />
+    <Content Include="images\big_conseils.jpg" />
+    <Content Include="images\big_des.jpg" />
+    <Content Include="images\bird.png" />
+    <Content Include="images\bkmark.png" />
+    <Content Include="images\blackpyalo.png" />
+    <Content Include="images\blue_bird.png" />
+    <Content Include="images\book.png" />
+    <Content Include="images\book1.png" />
+    <Content Include="images\booy.png" />
+    <Content Include="images\boy.png" />
+    <Content Include="images\bride.png" />
+    <Content Include="images\bride1.png" />
+    <Content Include="images\budget.png" />
+    <Content Include="images\budget_blue.png" />
+    <Content Include="images\cake.png" />
+    <Content Include="images\cal.png" />
+    <Content Include="images\camera.png" />
+    <Content Include="images\car.png" />
+    <Content Include="images\category.png" />
+    <Content Include="images\catrin.png" />
+    <Content Include="images\chair.png" />
+    <Content Include="images\clck.png" />
+    <Content Include="images\color.png" />
+    <Content Include="images\comAlta.jpg" />
+    <Content Include="images\couple.jpg" />
+    <Content Include="images\coup_1.jpg" />
+    <Content Include="images\coup_2.jpg" />
+    <Content Include="images\coup_3.jpg" />
+    <Content Include="images\coup_4.jpg" />
+    <Content Include="images\cra.png" />
+    <Content Include="images\delet.png" />
+    <Content Include="images\des_2.jpg" />
+    <Content Include="images\des_3.jpg" />
+    <Content Include="images\des_4.jpg" />
+    <Content Include="images\des_5.jpg" />
+    <Content Include="images\drpdwn.png" />
+    <Content Include="images\editor.png" />
+    <Content Include="images\filter.png" />
+    <Content Include="images\first_gallery.png" />
+    <Content Include="images\fixed_banner.jpg" />
+    <Content Include="images\flower.png" />
+    <Content Include="images\forth_gallery.png" />
+    <Content Include="images\gen_access-benefict_en-GB.png" />
+    <Content Include="images\gen_access-menu_en-GB.png" />
+    <Content Include="images\gift.png" />
+    <Content Include="images\girl.png" />
+    <Content Include="images\girll.png" />
+    <Content Include="images\googleplay.png" />
+    <Content Include="images\groom.png" />
+    <Content Include="images\groom1.png" />
+    <Content Include="images\header-signup-vendors.jpg" />
+    <Content Include="images\hero.png" />
+    <Content Include="images\honeymoon.png" />
+    <Content Include="images\icon_facebook.png" />
+    <Content Include="images\invite.png" />
+    <Content Include="images\invition.png" />
+    <Content Include="images\jeff.jpg" />
+    <Content Include="images\jwel.png" />
+    <Content Include="images\kabutar.png" />
+    <Content Include="images\lady.png" />
+    <Content Include="images\llg.png" />
+    <Content Include="images\mail.png" />
+    <Content Include="images\mail_big.png" />
+    <Content Include="images\men.png" />
+    <Content Include="images\mesa-01.png" />
+    <Content Include="images\mesa-02.png" />
+    <Content Include="images\mesa-04.png" />
+    <Content Include="images\message_blue.png" />
+    <Content Include="images\message_profile.png" />
+    <Content Include="images\music.png" />
+    <Content Include="images\newslatter.jpg" />
+    <Content Include="images\other.png" />
+    <Content Include="images\pencil.png" />
+    <Content Include="images\placehd.png" />
+    <Content Include="images\placeholder_img.png" />
+    <Content Include="images\plus_1.jpg" />
+    <Content Include="images\plus_2.jpg" />
+    <Content Include="images\plus_3.jpg" />
+    <Content Include="images\plus_4.jpg" />
+    <Content Include="images\pour_1.jpg" />
+    <Content Include="images\pour_2.jpg" />
+    <Content Include="images\pour_3.jpg" />
+    <Content Include="images\pour_4.jpg" />
+    <Content Include="images\presti.png" />
+    <Content Include="images\presti_blue.png" />
+    <Content Include="images\pyala.png" />
+    <Content Include="images\reception.png" />
+    <Content Include="images\right.png" />
+    <Content Include="images\ring.png" />
+    <Content Include="images\ring_2.png" />
+    <Content Include="images\second_gallery.png" />
+    <Content Include="images\separadorInvitationMaker.png" />
+    <Content Include="images\small_img.jpg" />
+    <Content Include="images\smmen.png" />
+    <Content Include="images\sprite-subnav-ideas.svg" />
+    <Content Include="images\sprite-subnav.svg" />
+    <Content Include="images\sprite.png" />
+    <Content Include="images\sprite_access.svg" />
+    <Content Include="images\sprite_access_bridge.svg" />
+    <Content Include="images\sprite_flags.svg" />
+    <Content Include="images\sprite_icon_login.svg" />
+    <Content Include="images\sprite_landing.svg" />
+    <Content Include="images\sprite_login.png" />
+    <Content Include="images\sprite_menuEmp.svg" />
+    <Content Include="images\sprite_nav.svg" />
+    <Content Include="images\sprite_recien-casados.svg" />
+    <Content Include="images\sprite_ribbon.svg" />
+    <Content Include="images\sprite_search.png" />
+    <Content Include="images\sprite_ui.svg" />
+    <Content Include="images\ss.png" />
+    <Content Include="images\tabl_seting.png" />
+    <Content Include="images\thrd_gallery.png" />
+    <Content Include="images\tpGrid.gif" />
+    <Content Include="images\trans.png" />
+    <Content Include="images\truck.png" />
+    <Content Include="images\user.png" />
+    <Content Include="images\wadding_i.png" />
+    <Content Include="images\wedplner.png" />
+    <Content Include="images\woman.png" />
+    <Content Include="js\bootstrap-datepicker.min.js" />
+    <Content Include="js\bootstrap-select.min.js" />
+    <Content Include="js\bootstrap-touch-slider-min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.matchHeight.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.touchSwipe.min.js" />
+    <Content Include="js\jquery_1.js" />
+    <Content Include="js\js-ssl-utf8-ssl20170821-02UK97-1-common1.js" />
+    <Content Include="js\js-ssl-utf8-ssl20170829-01UK97-1-common.js" />
+    <Content Include="js\menu.js" />
+    <Content Include="js\slick.min.js" />
+    <Content Include="Models\Chicadress.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Chicadress.Context.cs</LastGenOutput>
+      <DependentUpon>Chicadress.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Chicadress.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Chicadress.edmx</DependentUpon>
+      <LastGenOutput>Chicadress.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\BauerBodoniStd-Roman.eot" />
+    <Content Include="Content\fonts\BauerBodoniStd-Roman.otf" />
+    <Content Include="Content\fonts\BauerBodoniStd-Roman.ttf" />
+    <Content Include="Content\fonts\BauerBodoniStd-Roman.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Content\fonts\gotham-medium-webfont.eot" />
+    <Content Include="Content\fonts\gotham-medium-webfont.ttf" />
+    <Content Include="Content\fonts\gotham-medium-webfont.woff" />
+    <Content Include="Content\fonts\gotham-medium-webfont.woff2" />
+    <Content Include="Content\fonts\lora-bold-webfont.eot" />
+    <Content Include="Content\fonts\lora-bold-webfont.ttf" />
+    <Content Include="Content\fonts\lora-bold-webfont.woff" />
+    <Content Include="Content\fonts\lora-bold-webfont.woff2" />
+    <Content Include="Content\fonts\lora-italic-webfont.eot" />
+    <Content Include="Content\fonts\lora-italic-webfont.ttf" />
+    <Content Include="Content\fonts\lora-italic-webfont.woff" />
+    <Content Include="Content\fonts\lora-italic-webfont.woff2" />
+    <Content Include="Content\fonts\lora-regular-webfont.eot" />
+    <Content Include="Content\fonts\lora-regular-webfont.ttf" />
+    <Content Include="Content\fonts\lora-regular-webfont.woff" />
+    <Content Include="Content\fonts\lora-regular-webfont.woff2" />
+    <Content Include="Content\fonts\MonotypeCorsiva.eot" />
+    <Content Include="Content\fonts\MonotypeCorsiva.ttf" />
+    <Content Include="Content\fonts\MonotypeCorsiva.woff" />
+    <Content Include="Content\fonts\onlinewebfonts.eot" />
+    <Content Include="Content\fonts\onlinewebfonts.ttf" />
+    <Content Include="Content\fonts\onlinewebfonts.woff" />
+    <Content Include="Content\fonts\onlinewebfonts.woff2" />
+    <Content Include="Content\fonts\onlinewebfonts_camera.eot" />
+    <Content Include="Content\fonts\onlinewebfonts_camera.ttf" />
+    <Content Include="Content\fonts\onlinewebfonts_camera.woff" />
+    <Content Include="Content\fonts\onlinewebfonts_camera.woff2" />
+    <Content Include="Content\fonts\onlinewebfonts_cur.eot" />
+    <Content Include="Content\fonts\onlinewebfonts_cur.ttf" />
+    <Content Include="Content\fonts\onlinewebfonts_cur.woff" />
+    <Content Include="Content\fonts\onlinewebfonts_cur.woff2" />
+    <Content Include="Content\fonts\onlinewebfonts_mrg.eot" />
+    <Content Include="Content\fonts\onlinewebfonts_mrg.ttf" />
+    <Content Include="Content\fonts\onlinewebfonts_mrg.woff" />
+    <Content Include="Content\fonts\onlinewebfonts_mrg.woff2" />
+    <Content Include="Content\fonts\onlinewebfonts_task.eot" />
+    <Content Include="Content\fonts\onlinewebfonts_task.ttf" />
+    <Content Include="Content\fonts\onlinewebfonts_task.woff" />
+    <Content Include="Content\fonts\onlinewebfonts_task.woff2" />
+    <Content Include="Content\fonts\onlinewebfonts_vndr.eot" />
+    <Content Include="Content\fonts\onlinewebfonts_vndr.ttf" />
+    <Content Include="Content\fonts\onlinewebfonts_vndr.woff" />
+    <Content Include="Content\fonts\onlinewebfonts_vndr.woff2" />
+    <Content Include="Content\fonts\onlinewebfonts__task.ttf" />
+    <Content Include="Content\fonts\onlinewebfonts__task.woff" />
+    <Content Include="Content\fonts\onlinewebfonts__task.woff2" />
+    <Content Include="Content\fonts\pts75f-webfont.eot" />
+    <Content Include="Content\fonts\pts75f-webfont.ttf" />
+    <Content Include="Content\fonts\pts75f-webfont.woff" />
+    <Content Include="Content\fonts\pts75f-webfont.woff2" />
+    <Content Include="Content\fonts\PTSans-Caption.eot" />
+    <Content Include="Content\fonts\PTSans-Caption.ttf" />
+    <Content Include="Content\fonts\PTSans-Caption.woff" />
+    <Content Include="Content\fonts\slick.eot" />
+    <Content Include="Content\fonts\slick.ttf" />
+    <Content Include="Content\fonts\slick.woff" />
+    <EntityDeploy Include="Models\Chicadress.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Chicadress.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Chicadress.edmx.diagram">
+      <DependentUpon>Chicadress.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\Chicadress - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Style.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\Register\Login.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Register\Information.cshtml" />
+    <Content Include="Views\Register\Activation.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Budget\" />
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52532</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52532/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Wedding Site</title>
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link href="~/Content/css/hover-min.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/animate.min.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/bootstrap-select.min.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/css/menu.css" />
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/css/demo.css" />
+    <link href="~/Content/css/bootstrap-touch-slider.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/icon.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/style.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" media="all" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="wsmenucontainer clearfix">
+        <div class="overlapblackbg"></div>
+        <div class="wsmobileheader clearfix">
+            <a id="wsnavtoggle" class="animated-arrow"><span></span></a>
+            <a class="smallogo">
+                <img src="Webslide_files/sml-logo.png" alt="" width="87">
+            </a>
+            <a class="callusicon" href="tel:" title=""><span class="fa fa-phone"></span></a> 
+        </div>
+        <div class="headtoppart clearfix">
+            <div class="headerwp">
+                <div class="headertopleft">
+                    <div class="address clearfix">
+                        <a href="javascript:void(0);" title="">
+                            Accès Entreprise
+                        </a>
+                    </div>
+                </div>
+                <div class="headertopright">
+                    <a class="facebookicon" href="#">
+                        FAQ
+                    </a>
+                    <a class="twittericon" href="#">@Html.ActionLink("s’enregistrer", "Index", "Register")
+                        
+                    </a>
+                    <a class="linkedinicon" href="#">@Html.ActionLink("se connecter", "Login", "Register")
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="headerfull">
+            <div class="wsmain">
+                <div class="smllogo">
+                    <a href="#">
+                        <i class="logo"></i>
+                    </a>
+                </div>
+                <nav class="wsmenu clearfix">
+                    <ul class="mobile-sub wsmenu-list">
+                        <li>
+                            <span class="wsmenu-click"></span><a href="#" class="hvr-overline-from-center">mon Mariage</a>
+                        </li>
+                        <li>
+                            <span class="wsmenu-click"></span>
+                            <a href="#" class="hvr-overline-from-center">adresses</a>
+                        </li>
+                        <li>
+                            <span class="wsmenu-click"></span>
+                            <a href="#" class="hvr-overline-from-center">nos experts</a>
+                        </li>
+                        <li>
+                            <span class="wsmenu-click"></span>
+                            <a href="#" class="hvr-overline-from-center">Magazine</a>
+                        </li>
+                        <li>
+                            <span class="wsmenu-click"></span>
+                            <a href="#" class="hvr-overline-from-center">événements</a>
+                        </li>
+                        <li>
+                            <span class="wsmenu-click"></span>
+                            <a href="#" class="hvr-overline-from-center">Coin des créateurs</a>
+                        </li>
+                        <li>
+                            <span class="wsmenu-click"></span>
+                            <a href="#" class="hvr-overline-from-center">communauté </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+      
+
+       
+    </div>
+
+   
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>*@
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <section class="top_footer_box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="col-sm-3">
+                                <ul class="unstyled">
+                                    <h3>Wedding Venues</h3>
+                                    <li>
+                                        <a href="#">Mansion weddings <span>10</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding venue hotels <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding in restaurant <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Catering for a wedding <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding castle venues <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Unique venue <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Barn wedding <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Town halls for hire <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Conference centers <span>46</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <ul class="unstyled">
+                                    <h3>Wedding Suppliers</h3>
+                                    <li>
+                                        <a href="#">Wedding invitations <span>10</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Favors for weddings <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Photographer for wedding <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding videographer <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding music for ceremony <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Car for wedding <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Marquee rental <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding entertainment <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding flower shops <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Weddings planner <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding and honeymoon <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding decorating <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding cakes <span>46</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <ul class="unstyled">
+                                    <h3>Brides</h3>
+                                    <li>
+                                        <a href="#">Bridal dresses <span>10</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding accessories <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding jewellery <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding hair <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wedding make up <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Evening dresses<span>46</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-3">
+                                <ul class="unstyled">
+                                    <h3>Grooms</h3>
+                                    <li>
+                                        <a href="#">Wedding suits <span>10</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Men's accessories <span>46</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Men's beauty <span>46</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="copyright">
+                <div class="container">
+                    <div class="col-md-4">
+                        <p></p>
+                    </div>
+                    <div class="col-md-8">
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        @*<hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>*@
+    </div>
+
+    <script src="~/Content/js/js-ssl-utf8-ssl20170821-02UK97-1-common.js"></script>
+    <script src="~/Content/js/jquery_1.js"></script>
+
+
+    <script type="text/javascript" src="~/Content/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="~/Content/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/menu.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap-touch-slider-min.js"></script>
+    <script type="text/javascript">
+        $('#bootstrap-touch-slider').bsTouchSlider();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var mySelect = $('#first-disabled2');
+        });
+    </script>
+    <script type="text/javascript">
+        function getTimeRemaining(endtime) {
+            debugger;
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            debugger;
+            var clock = document.getElementById(id);
+            var daysSpan = clock.querySelector('.days');
+            var hoursSpan = clock.querySelector('.hours');
+            var minutesSpan = clock.querySelector('.minutes');
+            var secondsSpan = clock.querySelector('.seconds');
+
+            function updateClock() {
+                debugger;
+                var t = getTimeRemaining(endtime);
+
+                daysSpan.innerHTML = t.days;
+                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+        initializeClock('clockdiv', deadline);
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

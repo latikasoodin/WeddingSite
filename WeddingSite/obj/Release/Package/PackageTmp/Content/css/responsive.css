@@ -1,0 +1,79 @@
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+.wrapper {
+    width: 100%;
+    margin: 0% 0%;
+}
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) 
+{
+	.wsmenu-list > li > a {font-size: 11px;padding: 5px 10px;}
+	.data_block img{max-height:340px;}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) 
+{
+	.headertopright a{width:auto;}
+	.nos_expert h2,.plannifier h2{font-size:28px;}
+	.plannifier ul li{padding:0 5px;}
+	.data_three h4{font-size:14px;line-height:16px;}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) 
+{
+	.thumbnail>img{width:100%;}
+	.newsletter img{width:100%;}
+	.card-1 { margin-bottom: 0px;}
+	.teste_vous h3,.articles_less h3,.parole_aux h3,.idees_et_conseils h3,.parole_aux_maries h3,.coup_de_coeur h3{font-size:30px;}
+	.teste_vous h5,.articles_less h5,.parole_aux h5,.idees_et_conseils h5,.parl_txt h5 {padding-left: 5px;top: 0px;margin-top:0px;margin-bottom:10px;}
+	.test_vous_icon_rgt{top:-10px;}
+	.data_block{padding-right:15px;}
+	.data_three{padding:10px 0px 0px;}
+	.mobile.row{margin:0px;}
+	.nos_expert h4{text-align:center;}
+	.data_three img { width: 100%;max-height: inherit;}
+	.coup_de_coeur .thumbnail{margin-bottom:10px;}
+	.plannifier h2{font-size:24px;}
+	.plannifier ul li{width:50%;padding:0px;}
+	.btn-dem{margin:10px auto;display:block;width:200px;}
+	.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){width:100%;margin:5px 0px;}
+	.carousel-inner>.item{height:260px;}
+	.ovrly_form{padding:5px 0px;}
+	.btnbanner{margin:5px 0px;}
+	.nos_expert {background-size: cover;}
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1024px){
+.wrapper {
+    width: 100%;
+    margin: 0% 0%;
+}
+}
+
+@media only screen and (max-width: 1064px) and (min-width: 781px){
+
+.wrapper {
+    width: 100%;
+    margin: 0% 0%;
+}
+
+}
+@media only screen and (min-width: 230px) and (max-width:780px) 
+{
+	.headertopright a { width: auto; text-align: center; float: left; }
+
+}
+@media only screen and (max-width: 1064px) and (min-width: 781px){
+.logo {
+		width:210px!important;
+}

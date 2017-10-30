@@ -1,0 +1,103 @@
+﻿@model WeddingSite.Models.Register
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link href="~/Content/css/hover-min.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/animate.min.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/bootstrap-select.min.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/css/menu.css" />
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/css/demo.css" />
+    <link href="~/Content/css/bootstrap-touch-slider.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/icon.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/style.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" media="all" />
+</head>
+<body>
+    
+    @using (Html.BeginForm("Login", "Register", FormMethod.Post))
+    {
+        <fieldset>
+
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-xs-12 col-lg-offset-2 col-md-offset-2 main_box">
+                            <div class="sub_main_box">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 couple item" style="background-image:url(../../Content/images/couple.jpg);">
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 right_log item">
+                                    <i class="logo lginlogo"></i>
+                                    <h2 class="login_title">Login to your account</h2>
+                                    <p class="login_action">
+                                        Don't have an account? <a class="app" href="">Sign up</a>
+                                    </p>
+                                    <div class="clearfix"></div>
+                                    <button class="loginBtn loginBtn--facebook">Login with Facebook</button>
+                                    <div class="login-or">
+                                        <hr class="hr-or">
+                                        <span class="span-or">or</span>
+                                    </div>
+
+                                    <form class="form loginform" role="form" method="post" action="login" id="login-nav" autocomplete="off">
+                                        <div class="form-group">
+                                            <input type="email" name="Email" class="form-control meteral" id="exampleInputEmail2" placeholder="Your email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="Password" class="form-control meteral" id="exampleInputPassword2" placeholder="Your password" required>
+                                            <div class="help-block text-right">
+                                                <a href="">Forget the password ?</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            @*<button type="submit" class="btn btn-primary btn-block btn_lgn">Log In</button>*@
+                                            <input type="submit" value="Log In" class="btn btn-primary btn-block btn_lgn" />
+                                        </div>
+                                        <p class="login_action_r">
+                                            Are you a professional ? <a class="app" href="">Login for businesses</a>
+                                        </p>
+                                    </form>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+    }  
+    
+    <script type="text/javascript" src="~/Content/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/menu.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap-touch-slider-min.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.matchHeight.js"></script>
+    <script type="text/javascript">
+        $('#bootstrap-touch-slider').bsTouchSlider();
+        $('.item').matchHeight({
+            property: 'min-height'
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var mySelect = $('#first-disabled2');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Information</title>
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link href="~/Content/css/hover-min.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/animate.min.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/bootstrap-select.min.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/css/menu.css" />
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/css/demo.css" />
+    <link href="~/Content/css/bootstrap-touch-slider.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/icon.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/style.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" media="all" />
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Modal Example</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                        <div class="modal-title">
+                            <div class="modal-banner modal-banner-initplanner modal-bannerLogo">
+                                <h4>Start planning your wedding</h4>
+                                <p>To start using our free wedding planner tools, you must provide us with a few details about your big day.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class=" border-bottom ">
+                            <h3 class="FIrstText">Verify date and location</h3>
+                        </div>
+                        <div class="">
+                            <div class="row CustomRow">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="SolicFecha">Wedding date</label>
+                                        <div class='input-group date' id='datetimepicker10'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar">
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Town/City
+                                        </label>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                    <p class="imgText">
+                                        <small>
+                                            <span>India</span>
+                                            <a href="#">Change</a>
+                                        </small>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="border-top border-bottom SecSectionText">
+                                <h3 class="upper">My partner</h3>
+                            </div>
+                            <div class="row CustomRow">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="SolicFecha">My partner's name</label>
+                                        <input type='text' class="form-control" />
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            My partner is
+                                        </label>
+                                        <select class="SelectDrop">
+                                            <option value="GROOM" selected="">Groom</option>
+                                            <option value="BRIDE">Bride</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-top border-bottom SecSectionText">
+                                <h3 class="upper">Budget</h3>
+                            </div>
+                            <div class="row CustomRow">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="SolicFecha">Approximate Budget</label>
+                                        <input type='text' class="form-control" /><span class="currency mr10 fs12">£</span>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="SolicFecha">Number of guests</label>
+                                        <input type='text' class="form-control" />
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-top border-bottom ">
+                                <h3 class="FIrstText">Select the wedding providers that you need</h3>
+                            </div>
+                            <div class="row CustomRow CheckB">
+
+                                <div class="col-md-4">
+                                    <div class="checkbox">
+
+                                        <label>
+                                            <input type="checkbox" />Reception
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+
+                                        <label>
+                                            <input type="checkbox" />  Music
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+
+                                        <label>
+                                            <input type="checkbox" />  Wedding favours
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="checkbox">
+
+                                        <label>
+                                            <input type="checkbox" />  Catering
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+
+                                        <label>
+                                            <input type="checkbox" /> Wedding car
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+
+                                        <label>
+                                            <input type="checkbox" /> Bridal Accessories
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="checkbox">
+
+                                        <label>
+                                            <input type="checkbox" />  Photography and video
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+
+                                        <label>
+                                            <input type="checkbox" />Wedding invitations
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+
+                                        <label>
+                                            <input type="checkbox" />  Honeymoon
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row CustomRow">
+                                    <div class="Col-md-12 ViewBtn">
+                                        <small>
+                                            <a href="#"> View more</a>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default SaveBrn" data-dismiss="modal">Save</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker10').datetimepicker({
+                viewMode: 'years',
+                format: 'MM/YYYY'
+            });
+        });
+    </script>
+
+</body>
+</html>
